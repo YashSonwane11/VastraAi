@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background-color: #FAF7F2; color: #1A1512; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+}
+
+@layer components {
+  .btn-primary { 
+    @apply bg-gradient-to-r from-saffron to-saffron-dark text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0; 
+  }
+  .btn-secondary { 
+    @apply border-2 border-gold text-gold-dark px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-gold hover:text-white hover:-translate-y-0.5; 
+  }
+  .card-premium { 
+    @apply bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500; 
+  }
+  .container-max { 
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; 
+  }
+  .text-gradient { 
+    @apply bg-gradient-to-r from-saffron via-gold to-saffron-dark bg-clip-text text-transparent; 
+  }
+}
